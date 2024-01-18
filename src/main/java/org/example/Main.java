@@ -1,8 +1,11 @@
 package org.example;
 
+import org.apache.poi.ss.usermodel.Workbook;
+import org.example.excel.CustomerExcelReader;
 import org.example.excel.CustomerExcelWriter;
 import org.example.vo.CustomerVo;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +18,12 @@ public class Main {
 
         CustomerExcelWriter excelWriter = new CustomerExcelWriter();
         // xlsx writer
-        excelWriter.xlsxWriter(list);
+        File file = excelWriter.xlsxWriter(list, "test.xlsx");
+
+        // xlsx reader
+        CustomerExcelReader excelReader = new CustomerExcelReader();
+        excelReader.xlsxReader(file);
+
+        // todo combine xlsx files
     }
 }

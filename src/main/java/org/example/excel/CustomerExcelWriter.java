@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class CustomerExcelWriter {
-    public void xlsxWriter(List<CustomerVo> list) {
+    public File xlsxWriter(List<CustomerVo> list, String fileName) {
         // create workbook
         XSSFWorkbook workbook = new XSSFWorkbook();
         // create worksheet
@@ -59,7 +59,7 @@ public class CustomerExcelWriter {
         }
 
         // write the entered content to a file
-        File file = new File("test.xlsx");
+        File file = new File(fileName);
         FileOutputStream fos = null;
 
         try {
@@ -78,5 +78,7 @@ public class CustomerExcelWriter {
                 e.printStackTrace();
             }
         }
+
+        return file;
     }
 }
