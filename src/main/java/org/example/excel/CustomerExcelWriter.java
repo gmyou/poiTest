@@ -59,7 +59,7 @@ public class CustomerExcelWriter {
         }
 
         // write the entered content to a file
-        File file = new File("C:\\Users\\hanid\\Desktop\\test.xlsx");
+        File file = new File("test.xlsx");
         FileOutputStream fos = null;
 
         try {

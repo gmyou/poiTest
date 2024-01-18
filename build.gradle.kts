@@ -14,7 +14,9 @@ repositories {
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
-    testImplementation("org.apache.poi:poi-ooxml:3.15")
+//  Apache POI
+    implementation("org.apache.poi:poi:5.0.0")
+    implementation("org.apache.poi:poi-ooxml:5.0.0")
 }
 
 tasks.test {
